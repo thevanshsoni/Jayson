@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Jayson </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="logo">
+    <img src="../assets/jayson-logo-start.png" alt="Jayson Logo" width="204" height="236" />
+  </div>
+
+  <div class="header">
+    <h1>Make Reddit Dumps Speak.</h1>
+    <p>Dumps Don’t Have To Be Ugly.</p>
+  </div>
+
+  <div class="button ndjson-btn">
+    <img src="../assets/reddit-logo.png" width="21" height="17" />
+    Upload Your NDJSON File
+  </div>
+
+  <div class="button comments-btn">
+    <img src="../assets/comments logo.svg" width="15" height="13" />
+    Upload Comments File
+  </div>
+
+  <script src="renderer.js"> </script>
+  <script>
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      const { contextBridge, ipcRenderer } = require('electron');
+      contextBridge.exposeInMainWorld('electronAPI', {
+        openViewerWindow: (filePath) => ipcRenderer.send('open-viewer-window', filePath)
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jayson</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="viewer.css">
+</head>
+
+<body>
+  <div id="sidebar">
+    <div id="toggle-btn"><i class="fas fa-bars"></i></div>
+    <div id="sidebar-content">
+      <div class="subreddit-name">r/Subreddit</div>
+      <div class="post-count">0 Posts</div>
+      
+      <div class="section-title">Sort</div>
+      <select id="sort-select">
+        <option value="newest">Newest</option>
+        <option value="score">Top Score</option>
+        <option value="comments">Most Comments</option>
+        <option value="alphabetical">Alphabetical</option>
+      </select>
+      
+      <div class="section-title">View</div>
+      <div class="view-options">
+        <button class="view-btn active" data-view="card">
+          <i class="fas fa-th-large"></i>
+        </button>
+        <button class="view-btn" data-view="list">
+          <i class="fas fa-list"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="topbar">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="search-input" placeholder="Search posts...">
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="card-view view-container active"></div>
+    <div class="list-view view-container"></div>
+  </div>
+
+  <script src="viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../assets/cerapro-bold.otf");
+}
+
+body {
+  margin: 0;
+  background-color: #171B21;
+  font-family: 'Cera Pro', sans-serif;
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+
+.logo {
+  position: absolute;
+  top: 98px;
+  left: 298px;
+  width: 204px;
+  height: 236px;
+}
+
+
+.header {
+  position: absolute;
+  top: 376px;
+  left: 246px;
+  text-align: center;
+  width: 308px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header p {
+  font-size: 18px;
+  color: #696B6D;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+
+.button {
+  width: 287px;
+  height: 31px;
+  border-radius: 4.08px;
+  border: 0.56px solid #696B6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: 'Cera Pro', sans-serif;
+  position: absolute;
+  left: 257px;
+}
+
+.ndjson-btn {
+  top: 472px;
+  background-color: #FF4500;
+  color: white;
+  cursor: pointer;
+  font-family: 'Cera Pro', sans-serif;
+}
+
+.comments-btn {
+  top: 520px;
+  background-color: #171B21;
+  color: #ffffff;
+  font-family: 'Cera Pro', sans-serif;
+}
